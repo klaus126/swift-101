@@ -99,19 +99,22 @@ emptyStr.append("짜잔! ")
 emptyStr = emptyStr + "이어붙여집니다."
 print(emptyStr)
 
+//--------------------------
 // count를 셀수 있다,
 emptyStr.count
 //output : 12
 
+//--------------------------
 // 빈문자열인지 확인가능
 emptyStr.isEmpty
 //output : false
 
+//--------------------------
 //unicode scalar 값으로도 표현 가능
 let unicodeScalarValue: String = "\u{2665}"
 //output : ♥
 
-
+//--------------------------
 // 연산자를 통해 문자열을 비교할 수 있다.
 let ho: String = "ho!"
 let ha: String = "ha!"
@@ -127,6 +130,83 @@ isSameString = ho == "ha!"
 //output : false
 print(isSameString)
 //output : false
+
+isSameString = ho == "ho!"
+//output : true
+
+//isSameString = sayHello == "sayHello"
+//output : error -> unresolved identifier
+
+//--------------------------
+// 메서드를 통한 접두어, 접미어 확인
+var hasPrefix: Bool = false
+hasPrefix = hello.hasPrefix("He")
+//output : true
+// 위에서 정의해두었음. var hello = "Hello, playground"
+
+
+hasPrefix = hello.hasPrefix("HE")
+//output : false
+
+hasPrefix = emptyStr.hasPrefix("짜잔")
+//output : true
+
+var hasSuffix: Bool = false
+hasSuffix = hello.hasSuffix("He")
+//output : false
+
+hasSuffix = hello.hasSuffix("llo")
+//output : false
+
+//--------------------------
+// 메서드를 통한 대소문자 변환
+var convertedString: String = ""
+convertedString = hello.uppercased()
+print(convertedString)
+//output : HELLO, PLAYGROUND
+
+convertedString = hello.lowercased()
+print(convertedString)
+//output : hello, playground
+
+convertedString = emptyStr.uppercased()
+print(convertedString)
+//output : 짜잔! 이어붙여집니다.
+
+
+//--------------------------
+// property를 통한 빈 문자열 확인
+var isEmptyString: Bool = false
+isEmptyString = emptyStr.isEmpty
+print(isEmptyString) // false
+
+var greeting: String = "안녕"
+isEmptyString = greeting.isEmpty
+print(isEmptyString) // false
+
+greeting = ""
+isEmptyString = greeting.isEmpty
+print(isEmptyString) // true
+
+
+//--------------------------
+// property를 통한 문자열 길이 확인
+print(greeting.count) // 0
+
+greeting = "안녕하세요"
+print(greeting.count) // 5
+
+greeting = "안녕!"
+print(greeting.count) // 3
+
+
+
+
+//output :
+
+//--------------------------
+
+
 
 
 
