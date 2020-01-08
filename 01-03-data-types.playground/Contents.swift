@@ -19,6 +19,116 @@ var hello = "Hello, playground"
 // ii. explicit
 var num1: Int = 2
 
+//------------------------------------------------------------
+/*  [Int vs UInt]  */
+// i. Int : +, - 포함한 정수
+// ii. UInt : 0을 포함한 양의 정수
+//------------------------------------------------------------
+
+// Int vs UInt
+var integer: Int = -100
+let unsignedInteger: UInt = 50 //UInt에는 음의 정수를 할당할 수 없다.
+
+print("integer 값: \(integer), unsignedInteger 값: \(unsignedInteger)")
+print("Int 최대값: \(Int.max), Int 최소값: \(Int.min)")
+//output : Int 최대값: 9223372036854775807, Int 최소값: -9223372036854775808
+print("UInt 최대값: \(UInt.max), UInt 최소값: \(UInt.min)")
+//output : UInt 최대값: 18446744073709551615, UInt 최소값: 0
+
+
+
+
+
+//------------------------------------------------------------
+/*  [Bool]  */
+// true vs false
+//------------------------------------------------------------
+var booleanValue: Bool = true
+booleanValue.toggle() // true/false 반전
+let iLoveYou: Bool = true
+let isTimeUnlimited: Bool = true
+
+print("시간은 무한한가요? \(isTimeUnlimited)")
+// output : true
+
+
+
+
+
+//------------------------------------------------------------
+/*  [Float vs Double]  */
+// Float(32 bit, 6자리 숫자) vs Double(64 bit, 15자리 10진수)
+//------------------------------------------------------------
+var floatValue: Float = 1234567890.1
+//output : 1.234568e+09
+var doubleValue: Double = 1234567890.1
+//output : 1234567890.1
+
+
+
+//cf. 임의의 수 만들기
+Int.random(in: -100...100) //output : -73
+UInt.random(in: 0...100) //output : 98
+Float.random(in: -1.7...9.6) //output : -0.8184416
+Double.random(in: -50.5...100.3) //output : 100.01098279941..
+
+
+
+
+//------------------------------------------------------------
+/*  [Charater]  */
+// 유니코드9 문자 : 영어, 특수기호, 한글, 이모티콘 등 사용가능
+//------------------------------------------------------------
+let 한글: Character = "ㄱ"
+print(한글)
+
+
+
+
+//------------------------------------------------------------
+/*  [String]  */
+// 문자열, 유니코드9사용가능하며 값의 앞뒤에 "" 사용
+//------------------------------------------------------------
+//이니셜라이저를 사용하여 빈 문자열 생성가능
+var emptyStr: String = String()
+
+//.append() 메서드를 사용하여 문자열을 이어붙일 수 있다.
+emptyStr.append("짜잔! ")
+
+// + 연산자를 통해서도 이어붙일 수 있다.
+emptyStr = emptyStr + "이어붙여집니다."
+print(emptyStr)
+
+// count를 셀수 있다,
+emptyStr.count
+//output : 12
+
+// 빈문자열인지 확인가능
+emptyStr.isEmpty
+//output : false
+
+//unicode scalar 값으로도 표현 가능
+let unicodeScalarValue: String = "\u{2665}"
+//output : ♥
+
+
+// 연산자를 통해 문자열을 비교할 수 있다.
+let ho: String = "ho!"
+let ha: String = "ha!"
+
+var isSameString: Bool = false
+
+isSameString = ho == "ho!"
+//output : true
+print(isSameString)
+//output : true
+
+isSameString = ho == "ha!"
+//output : false
+print(isSameString)
+//output : false
+
+
 
 //------------------------------------------------------------
 /*  [Convert string to integer]  */
