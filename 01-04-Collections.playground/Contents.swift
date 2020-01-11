@@ -96,16 +96,16 @@ print(names1.last)
 
 print(names2) //["Klaus", "Jaein", "trump", "Klaus"]
 let firstItem: String = names2.removeFirst()
-print(firstItem)
+print(firstItem) // Klaus
 print(names2) //["Jaein", "trump", "Klaus"]
 let lastItem: String = names2.removeLast()
-print(lastItem)
+print(lastItem) // Klaus
 print(names2) // ["Jaein", "trump"]
 let indexZeroItem: String = names2.remove(at: 0)
-print(indexZeroItem)
-print(names2)
+print(indexZeroItem) //Jaein
+print(names2) // ["trump"]
 
 
-print(names1[1 ... 3])
+print(names1[1 ... 3]) //["Jaein", "happy", "trump"]
 
 
