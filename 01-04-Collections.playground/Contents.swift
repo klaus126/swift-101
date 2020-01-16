@@ -108,4 +108,3 @@ print(names2) // ["trump"]
 
 print(names1[1 ... 3]) //["Jaein", "happy", "trump"]
 
-
